@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards om Elektricitet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            cursor: pointer;
+            position: relative;
+            perspective: 1000px; /* För att skapa en 3D-effekt */
+            min-height: 150px; /* Säkerställer konsekvent höjd för vändning */
+        }
+        .card-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.4s;
+            transform-style: preserve-3d;
+            padding: 15px;
+            box-sizing: border-box;
+        }
+        .card-front, .card-back {
+            position: absolute;
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .card-front {
+            background-color: white;
+        }
+        .card-back {
+            background-color: #f0f0f0;
+            transform: rotateY(180deg);
+        }
+        .flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        .download-button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .download-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flashcards om Elektricitet</h1>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad är strömstyrka (I)?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Strömstyrka är ett mått på hur mycket elektrisk laddning som passerar en viss punkt per tidsenhet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad betyder spänning (U)?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Spänning är skillnaden i elektrisk potential mellan två punkter, och är den drivande kraften i en elektrisk krets.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad beskriver Ohms lag?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Ohms lag beskriver sambandet mellan spänning (U), strömstyrka (I) och resistans (R), och kan skrivas som U = R · I.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad är resistans (R)?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Resistans är ett mått på hur mycket ett material motstår elektrisk ström.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad är en elektrisk krets?</h3>
+                </div>
+                <div class="card-back">
+                    <p>En elektrisk krets är en sluten bana där elektroner kan flöda.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad betyder serie- och parallellkoppling?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Det handlar om hur komponenter kopplas i serier eller parallellt, vilket påverkar resistans och fördelningen av ström/spänning.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad är elektrisk effekt?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Elektrisk effekt är mängden energi som omvandlas per tidsenhet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Hur mäts elförbrukning?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Elförbrukning mäts i kilowattimme (kWh).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad är skillnaden mellan ledare och isolatorer?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Ledare är material som leder ström väl, medan isolatorer inte leder ström.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Vad är statisk elektricitet?</h3>
+                </div>
+                <div class="card-back">
+                    <p>Statisk elektricitet är laddningar som byggs upp på ytan av ett föremål och inte rör sig som en ström.</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="download-button" onclick="downloadHTML()">Ladda ner som HTML</button>
+    </div>
+
+    <script>
+        function downloadHTML() {
+            const element = document.createElement('a');
+            const file = new Blob([document.documentElement.outerHTML], {type: 'text/html'});
+            element.href = URL.createObjectURL(file);
+            element.download = 'flashcards.html';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+</html>
